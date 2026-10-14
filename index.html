@@ -2379,6 +2379,12 @@ body.is-admin-readonly #btnManageEvents {
     .report-qr .qr-box img { width: 160px; height: 160px; object-fit: contain; }
     .report-qr .qr-title { font-family: 'Outfit', var(--font-family); font-size: 1.3rem; font-weight: 700; margin: 0 0 .5rem; line-height: 1.3; }
     .report-qr .qr-desc { color: var(--text-secondary); font-size: .95rem; }
+    .report .coins-grid-container { backdrop-filter: none; }
+    .report .giver-coin-chip, .report .giver-coin-icon { animation: none; }
+    .report .giver-coin-chip:hover { transform: none; }
+    .report-ann { margin-bottom: 1rem; }
+    .report-ann .ann-title { font-family: 'Outfit', var(--font-family); font-size: 1.15rem; font-weight: 700; margin: 0 0 .3rem; }
+    .report-ann .ann-msg { color: var(--text-secondary); font-size: .95rem; line-height: 1.5; }
     .report-foot { color: var(--text-muted); font-size: .78rem; text-align: center; margin-top: 3rem; }
 
     @media print {
@@ -2387,6 +2393,9 @@ body.is-admin-readonly #btnManageEvents {
       .report { padding: 0; max-width: none; }
       .table-wrap { overflow: visible; border-radius: 0; }
       .kpi { break-inside: avoid; }
+      .coins-grid-container, .giver-coin-chip { box-shadow: none !important; }
+      .giver-coin-chip { background: #fff !important; border-color: #f59e0b !important; }
+      .giver-coin-amount { color: #b45309 !important; }
       thead { display: table-header-group; }
       tr { break-inside: avoid; }
     }
@@ -2438,7 +2447,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>14/10/2026</td>
               <td>Pembelian stok makanan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 75.00</td>
             </tr>
                       <tr>
@@ -2446,7 +2455,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>4/10/2026</td>
               <td>Pembelian stok makanan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 60.40</td>
             </tr>
                       <tr>
@@ -2454,7 +2463,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>30/9/2026</td>
               <td>Microwave Rack</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 19.28</td>
             </tr>
                       <tr>
@@ -2462,7 +2471,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>30/9/2026</td>
               <td>Toaster Cover</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 13.52</td>
             </tr>
                       <tr>
@@ -2470,7 +2479,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>29/9/2026</td>
               <td>Pinggan dan cawan pakai buang</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Hasliza Binti Jab</td>
+              <td class="muted">Hasliza</td>
               <td class="num">RM 27.80</td>
             </tr>
                       <tr>
@@ -2478,7 +2487,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>27/9/2026</td>
               <td>Pembelian stok makanan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 24.10</td>
             </tr>
                       <tr>
@@ -2486,7 +2495,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>27/9/2026</td>
               <td>Pembelian stok makanan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 40.25</td>
             </tr>
                       <tr>
@@ -2494,7 +2503,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>22/9/2026</td>
               <td>Pinggan dan cawan pakai buang</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Hasliza Binti Jab</td>
+              <td class="muted">Hasliza</td>
               <td class="num">RM 10.60</td>
             </tr>
                       <tr>
@@ -2502,7 +2511,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>15/9/2026</td>
               <td>Biskut Jagung Tin</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 52.00</td>
             </tr>
                       <tr>
@@ -2510,7 +2519,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>14/9/2026</td>
               <td>Pembelian di KH HOUSEWARE</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 22.44</td>
             </tr>
                       <tr>
@@ -2518,7 +2527,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>6/9/2026</td>
               <td>Pembelian rak pinggan</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 78.70</td>
             </tr>
                       <tr>
@@ -2526,7 +2535,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>5/9/2026</td>
               <td>Pembelian tisu gulung</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 68.27</td>
             </tr>
                       <tr>
@@ -2534,7 +2543,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>24/8/2026</td>
               <td>Pembelian Makanan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 76.55</td>
             </tr>
                       <tr>
@@ -2542,7 +2551,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>24/8/2026</td>
               <td>Extension Socket SIRIM LMX (5 Gang &amp; 3 Gang)</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Ahmad Zabil Albar Bin Othman</td>
+              <td class="muted">Ahmad Zabil Albar</td>
               <td class="num">RM 58.05</td>
             </tr>
                       <tr>
@@ -2550,7 +2559,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>22/8/2026</td>
               <td>Pisang Berangan</td>
               <td class="muted">Makanan/Minuman</td>
-              <td class="muted">Shaiful Rizal bin Samad</td>
+              <td class="muted">Shaiful Rizal</td>
               <td class="num">RM 25.00</td>
             </tr>
                       <tr>
@@ -2558,7 +2567,7 @@ body.is-admin-readonly #btnManageEvents {
               <td>21/8/2026</td>
               <td>Beras dan perkakasan pantry</td>
               <td class="muted">Peralatan</td>
-              <td class="muted">Siti Nor Awaeliana Binti Othman</td>
+              <td class="muted">Siti Nor Awaeliana</td>
               <td class="num">RM 31.55</td>
             </tr>
                   </tbody>
@@ -2570,10 +2579,88 @@ body.is-admin-readonly #btnManageEvents {
   </section>
 
   
+    <!-- Giver coins: anonymised amounts only, oldest first -->
+  <section>
+    <h2><i class="fa-solid fa-coins"></i> Sumbangan <span class="count">(17)</span></h2>
+    <div class="coins-grid-container">
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 25.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 20.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 100.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 80.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 63.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 100.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 100.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 30.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 30.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 50.00</span>
+      </div>
+            <div class="giver-coin-chip">
+        <div class="giver-coin-icon"><i class="fa-solid fa-coins"></i></div>
+        <span class="giver-coin-amount">RM 20.00</span>
+      </div>
+          </div>
+  </section>
+
+  
     <!-- QR payment info (the dashboard's "Info QR Code" card) -->
   <section>
     <h2><i class="fa-solid fa-qrcode"></i> Info QR Code</h2>
-    <div class="report-qr">
+        <div class="report-ann">
+      <div class="ann-title">Sumbangan Terbuka</div>      <div class="ann-msg">Sumbangan dibuka untuk pembelian peralatan dan makanan di pantry. Seikhlas hati, tiada paksaan.</div>    </div>
+        <div class="report-qr">
             <div class="qr-box"><img src="data:image/png;base64,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" alt="QR Code"></div>
             <div>
         <div class="qr-title">QR Code<br />
@@ -2584,7 +2671,7 @@ Ahmad Zabil Albar</div>
   </section>
 
   
-  <p class="report-foot">Laporan dijana secara automatik oleh Pantry Aras 2 &middot; 14/10/2026 15:30</p>
+  <p class="report-foot">Laporan dijana secara automatik oleh Pantry Aras 2 &middot; 14/10/2026 15:38</p>
 </main>
 
 <script>
